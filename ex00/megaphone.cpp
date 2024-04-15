@@ -5,12 +5,11 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: adube <adube@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/10 15:20:58 by adube             #+#    #+#             */
-/*   Updated: 2024/04/10 15:38:25 by adube            ###   ########.fr       */
+/*   Created: 2024/04/15 11:27:01 by adube             #+#    #+#             */
+/*   Updated: 2024/04/15 11:37:22 by adube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include <iostream>
 
 int main(int argc, char **argv)
@@ -19,10 +18,15 @@ int main(int argc, char **argv)
         std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
     else
         {
-            std::string str = argv[1];
-            for (int i = 0; i < argc; i++)
+            for (int i = 1; argv[i]; i++)
             {
-                 std::cout << toupper(str[i]);
+                std::string str = argv[i];
+                for (int index = 0; argv[i][index]; index++)
+                {
+                    std::cout << (char) toupper(str[index]);
+                }
+                if (i < argc)
+                     std::cout << ' ';
             }
             std::cout << std::endl;
         }
