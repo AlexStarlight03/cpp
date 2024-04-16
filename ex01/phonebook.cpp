@@ -6,7 +6,7 @@
 /*   By: adube <adube@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 11:43:07 by adube             #+#    #+#             */
-/*   Updated: 2024/04/15 14:59:04 by adube            ###   ########.fr       */
+/*   Updated: 2024/04/16 10:04:56 by adube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,28 @@ PhoneBook::PhoneBook(void)
 
 PhoneBook::~PhoneBook(void) {}
 
+std::string	PhoneBook::_limitsize(std::string str)
+{
+	if (str.size() > 10)
+	{
+		str.resize(10);
+		str[str.size() - 1] = '.';
+	}
+	return (str);
+}
+
 void    PhoneBook::_showcontacts(void)
 {
     Contact contact;
     int     i;
 
-    i = 0;
     std::cout << std::setfill(' ') << "|" << std::setw(10) << "index" \
             << "|" << std::setw(10) << "first name" \
 			<< "|" << std::setw(10) << "last name" \
 			<< "|" << std::setw(10) << "nickname" \
 			<< "|" << std::endl;
-    while (i++ < 8)
+    i = 0;
+    while (i < 8)
     {
         contact = this->_contacts[i];
         if (contact.get_firstname().empty())
@@ -39,7 +49,15 @@ void    PhoneBook::_showcontacts(void)
                 std::cout << "You currently have no friends :(" << std::endl;
 			break ;
 		}
-        
+        else
+        {
+			    std::cout << std::setfill(' ') << "|" << std::setw(10) << i + 1 \
+            << "|" << std::setw(10) << _limitsize(contact.get_firstname()) \
+			<< "|" << std::setw(10) << _limitsize(contact.get_lastname()) \
+			<< "|" << std::setw(10) << _limitsize(contact.get_nickname())\
+			<< "|" << std::endl;
+        }
+        i++;
     }
 }
 
@@ -77,24 +95,19 @@ void    PhoneBook::adding(void)
 void    PhoneBook::searching(void)
 {
     int id;
+	std::string str;
 
-    //add a function to prints current contacts ID, first name, last name and nickname with limmit of 10 characters
-    
+    _showcontacts();
     std::cout << "What ID are you looking for? ";
-    std::cin >> id;
-    //need to fix when your enter something thats not a digit
-    if (std::isdigit(id) != 0)
+    std::cin >> str;
+	id = atoi(str.c_str());
+	if (std::cin.fail() || id < 1 || id > 8 || str.length() > 1)
+		std::cout << "This ID is not valid, sorry :(" << std::endl;
+	else
     {
-        std::cout << "This ID is not valid, sorry :(" << std::endl;
-        return ;
-    }   
-    if (std::isdigit(id) == 0 && id > 0 && id < 9)
-    {
-            if (this->_contacts[id - 1].get_firstname().empty())
-                std::cout << "This ID is empty, sorry :(" << std::endl;
-            else
-                this->_contacts[id - 1].printinfo();
-        }
-    else 
-        std::cout << "This ID is not valid, sorry :(" << std::endl;
+        if (this->_contacts[id - 1].get_firstname().empty())
+			std::cout << "This ID is empty, sorry :(" << std::endl;
+		else
+			this->_contacts[id - 1].printinfo();
+	}	
 }
