@@ -6,7 +6,7 @@
 /*   By: adube <adube@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 14:51:53 by adube             #+#    #+#             */
-/*   Updated: 2024/04/24 15:09:16 by adube            ###   ########.fr       */
+/*   Updated: 2024/04/24 17:24:24 by adube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,17 +46,37 @@ void Harl::_error( void )
 	std::cout << "This is unacceptable! I want to speak to the manager now." << std::endl;
 }
 
-void Harl::complain( std::string level )
+void Harl::complainFilter( std::string level, int filter )
 {
 	void	(Harl::*ptr_complain[4])(void) = {&Harl::_debug, &Harl::_info, &Harl::_warning, &Harl::_error};
 	std::string	type[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+	int block = 0;
 
+	switch (filter)
+	{
+		case 1:
+			break ;
+		case 2:
+			block = 1;
+			break ;
+		case 3:
+			block = 2;
+			break ;
+		case 4:
+			block = 3;
+			break ;
+	}
 	for (int i = 0; i < 4; i++)
 	{
-		if (type[i] == level)
+		if (i >= block)
 		{
-			(this->*ptr_complain[i])();
-			break ;
+			if (type[i] == level)
+			{
+				(this->*ptr_complain[i])();
+				break ;
+			}
 		}
+		else if (type[i] == level)
+			std::cout << "[Some useless complains]" << std::endl;
 	}
 }

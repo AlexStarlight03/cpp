@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adube <adube@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/16 14:13:04 by adube             #+#    #+#             */
-/*   Updated: 2024/04/24 14:23:25 by adube            ###   ########.fr       */
+/*   Created: 2024/04/16 14:51:49 by adube             #+#    #+#             */
+/*   Updated: 2024/04/24 15:45:10 by adube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Replace.hpp"
+#include <iostream>
+#pragma once
 
-int	main(int argc, char **argv)
+class Harl
 {
-	std::ifstream ifs("");
-	std::ofstream ofs("");
-
-	ofs.close();
-	ifs.close();
-}
+private:
+	void _debug( void );
+	void _info( void );
+	void _warning( void );
+	void _error( void );
+public:
+	Harl(/* args */);
+	~Harl();
+	
+	void complainFilter( std::string level, int filter );
+};

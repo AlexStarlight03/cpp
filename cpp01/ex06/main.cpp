@@ -5,18 +5,37 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: adube <adube@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/16 14:13:04 by adube             #+#    #+#             */
-/*   Updated: 2024/04/24 14:23:25 by adube            ###   ########.fr       */
+/*   Created: 2024/04/16 14:51:09 by adube             #+#    #+#             */
+/*   Updated: 2024/04/24 15:45:31 by adube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Replace.hpp"
+#include "Harl.hpp"
 
 int	main(int argc, char **argv)
 {
-	std::ifstream ifs("");
-	std::ofstream ofs("");
-
-	ofs.close();
-	ifs.close();
+	Harl harl;
+	int lev_filter = 0;
+	std::string	type[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+	
+	if (argc != 2)
+		return (1);
+	for (int i = 0; i < 4; i++)
+	{
+		if (argv[1] == type[i])
+		{
+			lev_filter = i + 1;
+			break ;
+		}
+		if (i == 3)
+			return (1);
+	}
+	harl.complainFilter("DEBUG", lev_filter);
+	harl.complainFilter("WARNING", lev_filter);
+	harl.complainFilter("ERROR", lev_filter);
+	harl.complainFilter("INFO", lev_filter);
+	harl.complainFilter("WARNING", lev_filter);
+	harl.complainFilter("ERROR", lev_filter);
+	harl.complainFilter("DEBUG", lev_filter);
+	return (0);
 }

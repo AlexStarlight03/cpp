@@ -6,7 +6,7 @@
 /*   By: adube <adube@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 14:39:39 by adube             #+#    #+#             */
-/*   Updated: 2024/04/16 14:42:36 by adube            ###   ########.fr       */
+/*   Updated: 2024/04/24 14:06:09 by adube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ public:
 	Replace();
 	~Replace();
 	
-	std::string	ft_replace(std::string content, std::string strold, std::string strnew);
+	std::string	ft_replace(std::string content, std::string to_change, std::string new_str);
 };
 
 
