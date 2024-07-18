@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.cpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adube <adube@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 11:43:07 by adube             #+#    #+#             */
-/*   Updated: 2024/04/16 10:04:56 by adube            ###   ########.fr       */
+/*   Updated: 2024/07/18 10:47:29 by adube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void    PhoneBook::_showcontacts(void)
 		}
         else
         {
-			    std::cout << std::setfill(' ') << "|" << std::setw(10) << i + 1 \
+			std::cout << std::setfill(' ') << "|" << std::setw(10) << i + 1 \
             << "|" << std::setw(10) << _limitsize(contact.get_firstname()) \
 			<< "|" << std::setw(10) << _limitsize(contact.get_lastname()) \
 			<< "|" << std::setw(10) << _limitsize(contact.get_nickname())\

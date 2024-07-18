@@ -6,7 +6,7 @@
 /*   By: adube <adube@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 13:59:26 by adube             #+#    #+#             */
-/*   Updated: 2024/04/16 14:07:34 by adube            ###   ########.fr       */
+/*   Updated: 2024/07/18 11:23:52 by adube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,12 @@ int	main()
 	bob.attack();
 	}
 	{
-//	Weapon club = Weapon("crude spiked club");
+	Weapon club = Weapon("crude spiked club");
 	HumanB jim("Jim");
-//	jim.setWeapon(club);
 	jim.attack();
-//	club.setType("some other type of club");
+	jim.setWeapon(club);
+	jim.attack();
+	club.setType("some other type of club");
 	jim.attack();
 	}
 	return 0;

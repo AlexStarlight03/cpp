@@ -6,7 +6,7 @@
 /*   By: adube <adube@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 13:31:53 by adube             #+#    #+#             */
-/*   Updated: 2024/04/16 14:04:23 by adube            ###   ########.fr       */
+/*   Updated: 2024/07/18 11:24:13 by adube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ HumanB::~HumanB()
 	std::cout << "HumanB destructor has been called" << std::endl;
 }
 
-void	HumanB::setWeapon(Weapon& weapon)
+void	HumanB::setWeapon(Weapon &weapon)
 {
 	this->_weapon = &weapon;
 }

@@ -6,13 +6,13 @@
 /*   By: adube <adube@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 13:31:56 by adube             #+#    #+#             */
-/*   Updated: 2024/04/16 14:04:38 by adube            ###   ########.fr       */
+/*   Updated: 2024/07/18 11:22:01 by adube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
 
-HumanA::HumanA(std::string name, Weapon& weapon)
+HumanA::HumanA(std::string name, Weapon &weapon)
 {
 	std::cout << "HumanA constructor has been called" << std::endl;
 	this->_weapon = &weapon;

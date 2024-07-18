@@ -6,7 +6,7 @@
 /*   By: adube <adube@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 10:21:13 by adube             #+#    #+#             */
-/*   Updated: 2024/04/24 13:11:53 by adube            ###   ########.fr       */
+/*   Updated: 2024/07/18 11:07:54 by adube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ int main(void)
     std::cout << "Name the zombie: ";
     std::cin >> input;
     std::cout << std::endl;
-
     Zombie *horde = zombieHorde(nb, input);
     for (int i = 0; i < nb; i++)
         horde[i].announce();
