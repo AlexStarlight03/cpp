@@ -5,20 +5,17 @@
 #                                                     +:+ +:+         +:+      #
 #    By: adube <adube@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/04/16 10:28:21 by adube             #+#    #+#              #
-#    Updated: 2024/04/16 11:17:00 by adube            ###   ########.fr        #
+#    Created: 2024/07/24 09:44:34 by adube             #+#    #+#              #
+#    Updated: 2024/07/24 09:45:03 by adube            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-#SETUP
-NAME		=	zombie
+NAME		=	claptrap
 CC			=	c++
 FLAGS		=	-Wall -Wextra -Werror -std=c++98
 RM			=	rm -rf
 
-SRCS	=	newZombie.cpp \
-			randomChump.cpp \
-			Zombie.cpp \
+SRCS	=	ClapTrap.cpp \
 			main.cpp
 OBJS	= $(SRCS:.cpp=.o)
 

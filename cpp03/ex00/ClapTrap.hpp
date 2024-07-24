@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.cpp                                         :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adube <adube@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/16 13:30:42 by adube             #+#    #+#             */
-/*   Updated: 2024/07/18 11:25:33 by adube            ###   ########.fr       */
+/*   Created: 2024/07/24 09:45:37 by adube             #+#    #+#             */
+/*   Updated: 2024/07/24 10:17:22 by adube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
+#pragma once
 
-Weapon::Weapon(std::string str)
+class ClapTrap
 {
-	std::cout << "Weapon constructor has been called" << std::endl;
-	setType(str);
-}
+private:
+	std::string _name;
+	int	_HitPoint = 10;
+	int	_EnergyPoint = 10;
+	int	_AttackDamage = 0;
+	
+public:
+	ClapTrap (std::string name);
+	ClapTrap (const ClapTrap &rhs);
+	ClapTrap &operator=(const ClapTrap &rhs);
+	~ClapTrap();
 
-Weapon::~Weapon()
-{
-	std::cout << "Weapon destructor has been called" << std::endl;
-}
+	void attack(const std::string& target);
+	void takeDamage(unsigned int amount);
+	void beRepaired(unsigned int amount);
 
-const std::string& Weapon::getType(void)
-{
-	return (this->_type);
-}
-
-void Weapon::setType(std::string type)
-{
-	this->_type = type;
-}
+};

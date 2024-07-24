@@ -6,7 +6,7 @@
 #    By: adube <adube@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/10 15:21:33 by adube             #+#    #+#              #
-#    Updated: 2024/04/15 11:28:01 by adube            ###   ########.fr        #
+#    Updated: 2024/07/24 09:20:07 by adube            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC			=	c++
 FLAGS		=	-Wall -Wextra -Werror -std=c++98
 RM			=	rm -rf
 
-SRCS	=	megaphone.cpp
+SRCS	=	Megaphone.cpp
 OBJS	= $(SRCS:.cpp=.o)
 
 

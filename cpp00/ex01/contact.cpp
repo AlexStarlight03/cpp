@@ -6,11 +6,11 @@
 /*   By: adube <adube@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 12:07:31 by adube             #+#    #+#             */
-/*   Updated: 2024/07/18 10:37:52 by adube            ###   ########.fr       */
+/*   Updated: 2024/07/24 09:25:50 by adube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "contact.hpp"
+#include "Contact.hpp"
 
 
 Contact::Contact(void) {}
@@ -69,9 +69,9 @@ void    Contact::make_darkestsecret(std::string _darkestsecret)
 
 void    Contact::printinfo(void)
 {
-    std::cout << "First name : " << this->_firstname << std::endl;
-    std::cout << "Last name : " << this->_lastname << std::endl;
-    std::cout << "Nickname : " << this->_nickname << std::endl;
-    std::cout << "Phone number : " << this->_phonenumber << std::endl;
-    std::cout << "Darkest secret : " << this->_darkestsecret << std::endl;
+    std::cout << "First name : " << get_firstname() << std::endl;
+    std::cout << "Last name : " << get_lastname() << std::endl;
+    std::cout << "Nickname : " << get_nickname() << std::endl;
+    std::cout << "Phone number : " << get_phonenumber() << std::endl;
+    std::cout << "Darkest secret : " << get_darkestsecret() << std::endl;
 }

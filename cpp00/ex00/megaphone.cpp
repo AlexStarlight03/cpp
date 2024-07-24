@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Megaphone.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adube <adube@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 11:27:01 by adube             #+#    #+#             */
-/*   Updated: 2024/04/15 11:37:22 by adube            ###   ########.fr       */
+/*   Updated: 2024/07/24 09:20:27 by adube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int main(int argc, char **argv)
                 std::string str = argv[i];
                 for (int index = 0; argv[i][index]; index++)
                 {
-                    std::cout << (char) toupper(str[index]);
+                    std::cout << (char)toupper(str[index]);
                 }
                 if (i < argc)
                      std::cout << ' ';

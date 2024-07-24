@@ -6,7 +6,7 @@
 #    By: adube <adube@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/10 15:21:33 by adube             #+#    #+#              #
-#    Updated: 2024/04/15 12:36:27 by adube            ###   ########.fr        #
+#    Updated: 2024/07/24 09:21:10 by adube            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,8 +16,8 @@ CC			=	c++
 FLAGS		=	-Wall -Wextra -Werror -std=c++98
 RM			=	rm -rf
 
-SRCS	=	phonebook.cpp \
-			contact.cpp \
+SRCS	=	PhoneBook.cpp \
+			Contact.cpp \
 			main.cpp
 OBJS	= $(SRCS:.cpp=.o)
 
