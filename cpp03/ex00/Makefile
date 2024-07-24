@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: adube <adube@student.42.fr>                +#+  +:+       +#+         #
+#    By: alexandrinedube <alexandrinedube@studen    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/24 09:44:34 by adube             #+#    #+#              #
-#    Updated: 2024/07/24 09:45:03 by adube            ###   ########.fr        #
+#    Updated: 2024/07/24 19:33:42 by alexandrine      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
