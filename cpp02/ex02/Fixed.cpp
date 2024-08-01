@@ -6,7 +6,7 @@
 /*   By: adube <adube@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 09:36:22 by adube             #+#    #+#             */
-/*   Updated: 2024/08/01 15:28:11 by adube            ###   ########.fr       */
+/*   Updated: 2024/08/01 15:28:25 by adube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,3 +78,110 @@ std::ostream &operator<<(std::ostream &o, Fixed const &fixed)
 	o << fixed.toFloat();
 	return (o);
 }
+
+int Fixed::operator<(Fixed nb) const
+{
+	return (this->toFloat() < nb.toFloat());
+}
+
+int Fixed::operator>(Fixed nb) const
+{
+	return (this->toFloat() > nb.toFloat());
+}
+
+int Fixed::operator>=(Fixed nb) const
+{
+	return (this->toFloat() >= nb.toFloat());
+}
+
+int Fixed::operator<=(Fixed nb) const
+{
+	return (this->toFloat() <= nb.toFloat());
+}
+
+int Fixed::operator==(Fixed nb) const
+{
+	return (this->toFloat() == nb.toFloat());
+}
+
+int Fixed::operator!=(Fixed nb) const
+{
+	return (this->toFloat() != nb.toFloat());
+}
+
+int Fixed::operator+(Fixed nb) const
+{
+	return (this->toFloat() + nb.toFloat());
+}
+
+int Fixed::operator-(Fixed nb) const
+{
+	return (this->toFloat() - nb.toFloat());
+}
+
+int Fixed::operator*(Fixed nb) const
+{
+	return (this->toFloat() * nb.toFloat());
+}
+
+int Fixed::operator/(Fixed nb) const
+{
+	return (this->toFloat() / nb.toFloat());
+}
+
+Fixed Fixed::operator++()
+{
+	this->_fixedPoint++;
+	return (*this);
+}
+
+Fixed Fixed::operator--()
+{
+	this->_fixedPoint--;
+	return (*this);
+}
+
+Fixed Fixed::operator++(int)
+{
+	Fixed tmp = *this;
+
+	++this->_fixedPoint;
+	return (*this);
+}
+
+Fixed Fixed::operator--(int)
+{
+	Fixed tmp = *this;
+
+	--this->_fixedPoint;
+	return (*this);
+}
+
+Fixed &Fixed::min(Fixed &one, Fixed &two)
+{
+	if (one.toFloat() <= two.toFloat())
+		return (one);
+	return (two);
+}
+
+const Fixed &Fixed::min(const Fixed &one, const Fixed &two)
+{
+	if (one.toFloat() <= two.toFloat())
+		return (one);
+	return (two);
+}
+
+Fixed &Fixed::max(Fixed &one, Fixed &two)
+{
+	if (one.toFloat() >= two.toFloat())
+		return (one);
+	return (two);
+}
+
+const Fixed &Fixed::max(const Fixed &one, const Fixed &two)
+{
+	if (one.toFloat() >= two.toFloat())
+		return (one);
+	return (two);
+}
+

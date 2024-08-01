@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adube <adube@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/26 09:36:30 by adube             #+#    #+#             */
-/*   Updated: 2024/08/01 11:07:53 by adube            ###   ########.fr       */
+/*   Created: 2024/07/24 09:45:37 by adube             #+#    #+#             */
+/*   Updated: 2024/07/30 10:49:52 by adube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
+
+#include <string>
 #include <iostream>
 
-class Fixed
+class ClapTrap
 {
 private:
-	int	_fixedPoint;
-	static const int _fractionalBits = 8;
+	std::string _name;
+	unsigned int	_HitPoint;
+	unsigned int	_EnergyPoint;
+	unsigned int	_AttackDamage;
 	
 public:
-	Fixed();
-	Fixed(const	Fixed & rhs);
-	Fixed& operator=(const	Fixed & rhs);
-	~Fixed();
+	ClapTrap (std::string name);
+	ClapTrap (const ClapTrap &rhs);
+	ClapTrap &operator=(const ClapTrap &rhs);
+	~ClapTrap();
 
-	int getRawBits( void ) const;
-	void setRawBits( int const raw );
+	void attack(const std::string& target);
+	void takeDamage(unsigned int amount);
+	void beRepaired(unsigned int amount);
+
 };

@@ -6,7 +6,7 @@
 /*   By: adube <adube@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 09:36:22 by adube             #+#    #+#             */
-/*   Updated: 2024/04/30 12:54:18 by adube            ###   ########.fr       */
+/*   Updated: 2024/08/01 15:28:17 by adube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,14 @@ Fixed::~Fixed()
 	std::cout << "Destructor has been called" << std::endl;
 }
 
-Fixed::Fixed(const	Fixed & rhs)
+Fixed::Fixed(const Fixed &rhs)
 {
 	std::cout << "Copy constructor has been called" << std::endl;
-	this->setRawBits(rhs.getRawBits());
+	*this = rhs;
 		
 }
 
-Fixed& Fixed::operator=(const	Fixed & rhs)
+Fixed& Fixed::operator=(const Fixed &rhs)
 {
 	std::cout << "Copy assignment operator has been called" << std::endl;
 	if (this != &rhs)
@@ -40,12 +40,12 @@ Fixed& Fixed::operator=(const	Fixed & rhs)
 
 int Fixed::getRawBits( void ) const
 {
-	std::cout << "getRawBits function has been called" << std::endl;
+	std::cout << "getRawBits member function has been called" << std::endl;
 	return (this->_fixedPoint);
 	
 }
 void Fixed::setRawBits( int const raw )
 {
-	std::cout << "setRawBits function has been called" << std::endl;
+	std::cout << "setRawBits member function has been called" << std::endl;
 	this->_fixedPoint = raw;
 }
