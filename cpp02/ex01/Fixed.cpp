@@ -6,11 +6,13 @@
 /*   By: adube <adube@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 09:36:22 by adube             #+#    #+#             */
-/*   Updated: 2024/08/01 15:28:11 by adube            ###   ########.fr       */
+/*   Updated: 2024/08/14 10:24:29 by adube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+
+const int Fixed::_fractionalBits = 8;
 
 Fixed::Fixed()
 {
@@ -65,7 +67,7 @@ void Fixed::setRawBits( int const raw )
 
 float Fixed::toFloat( void ) const
 {
-	return ((float)this->_fixedPoint / (1 << this->_fractionalBits));
+	return ((float)this->_fixedPoint / (float)(1 << this->_fractionalBits));
 }
 
 int Fixed::toInt( void ) const

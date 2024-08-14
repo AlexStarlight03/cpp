@@ -6,7 +6,7 @@
 #    By: adube <adube@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/24 09:44:34 by adube             #+#    #+#              #
-#    Updated: 2024/08/14 12:57:59 by adube            ###   ########.fr        #
+#    Updated: 2024/08/14 13:04:48 by adube            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ RM			=	rm -rf
 
 SRCS	=	ClapTrap.cpp \
 			ScavTrap.cpp \
+			FragTrap.cpp \
 			main.cpp
 OBJS	= $(SRCS:.cpp=.o)
 

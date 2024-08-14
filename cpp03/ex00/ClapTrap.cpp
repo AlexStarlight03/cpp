@@ -6,15 +6,25 @@
 /*   By: adube <adube@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 09:45:34 by adube             #+#    #+#             */
-/*   Updated: 2024/07/30 10:44:13 by adube            ###   ########.fr       */
+/*   Updated: 2024/08/14 11:22:07 by adube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap (std::string name)
+ClapTrap::ClapTrap ()
 {
 	std::cout << "Default constructor has been called" << std::endl;
+	this->_name = "Clap";
+	this->_HitPoint = 10;
+	this->_EnergyPoint = 10;
+	this->_AttackDamage = 0;
+}
+
+
+ClapTrap::ClapTrap (std::string name)
+{
+	std::cout << "Default Arguments constructor has been called" << std::endl;
 	this->_name = name;
 	this->_HitPoint = 10;
 	this->_EnergyPoint = 10;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alexandrinedube <alexandrinedube@studen    +#+  +:+       +#+        */
+/*   By: adube <adube@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 09:45:37 by adube             #+#    #+#             */
-/*   Updated: 2024/07/24 19:33:39 by alexandrine      ###   ########.fr       */
+/*   Updated: 2024/08/14 11:21:38 by adube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ private:
 	unsigned int	_AttackDamage;
 	
 public:
+	ClapTrap ();
 	ClapTrap (std::string name);
 	ClapTrap (const ClapTrap &rhs);
 	ClapTrap &operator=(const ClapTrap &rhs);

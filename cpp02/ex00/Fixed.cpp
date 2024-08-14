@@ -6,11 +6,13 @@
 /*   By: adube <adube@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 09:36:22 by adube             #+#    #+#             */
-/*   Updated: 2024/08/01 15:28:17 by adube            ###   ########.fr       */
+/*   Updated: 2024/08/14 10:24:45 by adube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+
+const int Fixed::_fractionalBits = 8;
 
 Fixed::Fixed()
 {

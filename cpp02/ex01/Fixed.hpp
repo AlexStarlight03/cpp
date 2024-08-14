@@ -6,7 +6,7 @@
 /*   By: adube <adube@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 09:36:30 by adube             #+#    #+#             */
-/*   Updated: 2024/04/30 13:13:53 by adube            ###   ########.fr       */
+/*   Updated: 2024/08/14 10:24:39 by adube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ class Fixed
 {
 private:
 	int	_fixedPoint;
-	static const int _fractionalBits = 8;
+	static const int _fractionalBits;
 	
 public:
 	Fixed();
