@@ -6,7 +6,7 @@
 /*   By: adube <adube@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 09:45:34 by adube             #+#    #+#             */
-/*   Updated: 2024/08/14 13:06:31 by adube            ###   ########.fr       */
+/*   Updated: 2024/08/15 10:06:50 by adube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ ClapTrap::~ClapTrap()
 void ClapTrap::attack(const std::string& target)
 {
 	if (_EnergyPoint <= 0)
-		std::cout << "ClapTrap " << _name << " is out of Energy";
+		std::cout << "ClapTrap " << _name << " is out of Energy" << std::endl;
 	else if (_HitPoint <= 0)
 		std::cout << "ClapTrap " << _name << " is out of HP, it is dead :(" << std::endl;
 	else

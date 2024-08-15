@@ -6,7 +6,7 @@
 /*   By: adube <adube@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 10:34:34 by adube             #+#    #+#             */
-/*   Updated: 2024/08/14 12:59:29 by adube            ###   ########.fr       */
+/*   Updated: 2024/08/15 10:04:22 by adube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,9 +58,9 @@ void ScavTrap::attack(const std::string& target)
 	if (_HitPoint <= 0)
 		std::cout << "ScavTrap " << _name << " is out of HP, it is dead :(" << std::endl;
 	else if (_EnergyPoint <= 0)
-		std::cout << "ScavTrap " << _name << " is out of Energy";
+		std::cout << "ScavTrap " << _name << " is out of Energy" << std::endl;
 	else if (_Mode != 0)
-		std::cout << "ScavTrap " << _name << " is Gate Keeper Mode and cannot attack";
+		std::cout << "ScavTrap " << _name << " is Gate Keeper Mode and cannot attack" << std::endl;
 	else
 	{
 		std::cout << "ScavTrap " << _name << " attacks " << target;
