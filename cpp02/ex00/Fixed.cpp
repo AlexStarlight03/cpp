@@ -6,7 +6,7 @@
 /*   By: adube <adube@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 09:36:22 by adube             #+#    #+#             */
-/*   Updated: 2024/08/14 10:24:45 by adube            ###   ########.fr       */
+/*   Updated: 2024/08/21 10:16:34 by adube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ Fixed::Fixed(const Fixed &rhs)
 {
 	std::cout << "Copy constructor has been called" << std::endl;
 	*this = rhs;
-		
 }
 
 Fixed& Fixed::operator=(const Fixed &rhs)
