@@ -6,7 +6,7 @@
 /*   By: adube <adube@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 09:45:34 by adube             #+#    #+#             */
-/*   Updated: 2024/08/15 10:06:50 by adube            ###   ########.fr       */
+/*   Updated: 2024/08/23 11:40:02 by adube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ ClapTrap::ClapTrap ()
 
 ClapTrap::ClapTrap (std::string name)
 {
-	std::cout << "ClapTrap Default constructor has been called" << std::endl;
+	std::cout << "ClapTrap Default args constructor has been called" << std::endl;
 	this->_name = name;
 	this->_HitPoint = 10;
 	this->_EnergyPoint = 10;

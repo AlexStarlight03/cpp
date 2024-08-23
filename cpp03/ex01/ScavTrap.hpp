@@ -6,7 +6,7 @@
 /*   By: adube <adube@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 10:34:29 by adube             #+#    #+#             */
-/*   Updated: 2024/08/14 12:59:35 by adube            ###   ########.fr       */
+/*   Updated: 2024/08/23 09:27:46 by adube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 #include "ClapTrap.hpp"
 #include <string>
+#include <iostream>
 
 class ScavTrap : public ClapTrap
 {

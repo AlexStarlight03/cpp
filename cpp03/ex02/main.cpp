@@ -6,7 +6,7 @@
 /*   By: adube <adube@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 09:45:40 by adube             #+#    #+#             */
-/*   Updated: 2024/08/15 10:00:49 by adube            ###   ########.fr       */
+/*   Updated: 2024/08/23 11:38:52 by adube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 int	main(void)
 {
     ClapTrap One("One");
-    ScavTrap O("O");
+    ScavTrap O;
     FragTrap Two("Two");
     
     One.takeDamage(5);
@@ -44,6 +44,7 @@ int	main(void)
 
     Two.attack("a bug");
     Two.beRepaired(10);
+    Two.highFivesGuys();
     Two.attack("another bug");
     Two.attack("another bug");
     Two.attack("another bug");

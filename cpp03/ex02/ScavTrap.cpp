@@ -6,7 +6,7 @@
 /*   By: adube <adube@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 10:34:34 by adube             #+#    #+#             */
-/*   Updated: 2024/08/15 10:06:12 by adube            ###   ########.fr       */
+/*   Updated: 2024/08/23 11:40:11 by adube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ ScavTrap::ScavTrap() : ClapTrap()
 
 ScavTrap::ScavTrap (std::string name) : ClapTrap(name)
 {
-	std::cout << "ScavTrap Default constructor has been called" << std::endl;
+	std::cout << "ScavTrap Default args constructor has been called" << std::endl;
 	this->_name = name;
 	this->_HitPoint = 100;
 	this->_EnergyPoint = 50;

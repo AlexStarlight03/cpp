@@ -6,7 +6,7 @@
 /*   By: adube <adube@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 09:45:34 by adube             #+#    #+#             */
-/*   Updated: 2024/08/14 13:02:56 by adube            ###   ########.fr       */
+/*   Updated: 2024/08/23 11:39:20 by adube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 ClapTrap::ClapTrap ()
 {
-	std::cout << "Default constructor has been called" << std::endl;
+	std::cout << "ClapTrap Default constructor has been called" << std::endl;
 	this->_name = "Clap";
 	this->_HitPoint = 10;
 	this->_EnergyPoint = 10;
@@ -23,7 +23,7 @@ ClapTrap::ClapTrap ()
 
 ClapTrap::ClapTrap (std::string name)
 {
-	std::cout << "Default constructor has been called" << std::endl;
+	std::cout << "ClapTrap Default args constructor has been called" << std::endl;
 	this->_name = name;
 	this->_HitPoint = 10;
 	this->_EnergyPoint = 10;
@@ -32,13 +32,13 @@ ClapTrap::ClapTrap (std::string name)
 
 ClapTrap::ClapTrap (const ClapTrap &rhs)
 {
-	std::cout << "Copy constructor has been called" << std::endl;
+	std::cout << "ClapTrap Copy constructor has been called" << std::endl;
 	*this = rhs;
 }
 
 ClapTrap& ClapTrap::operator=(const ClapTrap &rhs)
 {
-	std::cout << "Copy assignment operator constructor has been called" << std::endl;
+	std::cout << "ClapTrap Copy assignment operator constructor has been called" << std::endl;
 	this->_name = rhs._name;
 	this->_EnergyPoint = rhs._EnergyPoint;
 	this->_AttackDamage = rhs._AttackDamage;
@@ -47,7 +47,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap &rhs)
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "Destructor has been called" << std::endl;
+	std::cout << "ClapTrap Destructor has been called" << std::endl;
 }
 
 void ClapTrap::attack(const std::string& target)

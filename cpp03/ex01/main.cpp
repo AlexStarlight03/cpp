@@ -6,7 +6,7 @@
 /*   By: adube <adube@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 09:45:40 by adube             #+#    #+#             */
-/*   Updated: 2024/08/14 13:02:08 by adube            ###   ########.fr       */
+/*   Updated: 2024/08/23 09:29:23 by adube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ int	main(void)
     Two.attack("another bug");
     Two.attack("another bug");
     Two.attack("another bug");
+    Two.guardGate();
     Two.attack("another bug");
     Two.attack("another bug");
     Two.attack("another bug");
