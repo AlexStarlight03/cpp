@@ -6,7 +6,7 @@
 #    By: adube <adube@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/24 09:44:34 by adube             #+#    #+#              #
-#    Updated: 2024/08/15 12:00:09 by adube            ###   ########.fr        #
+#    Updated: 2024/08/23 12:56:03 by adube            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ SRCS	=	Animal.cpp \
 			WrongAnimal.cpp \
 			WrongCat.cpp \
 			Dog.cpp \
+			Brain.cpp \
 			main.cpp
 OBJS	= $(SRCS:.cpp=.o)
 

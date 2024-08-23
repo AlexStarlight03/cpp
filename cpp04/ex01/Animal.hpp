@@ -6,7 +6,7 @@
 /*   By: adube <adube@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 09:45:37 by adube             #+#    #+#             */
-/*   Updated: 2024/08/15 11:26:46 by adube            ###   ########.fr       */
+/*   Updated: 2024/08/23 13:12:33 by adube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 #include <string>
 #include <iostream>
+#include "Brain.hpp"
 
-class Animal
+class Animal : public Brain
 {
 protected:
 	std::string _type;

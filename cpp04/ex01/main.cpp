@@ -6,76 +6,86 @@
 /*   By: adube <adube@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 09:45:40 by adube             #+#    #+#             */
-/*   Updated: 2024/08/15 12:01:51 by adube            ###   ########.fr       */
+/*   Updated: 2024/08/23 13:08:51 by adube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-    #include "Animal.hpp"
-	#include "Cat.hpp"
-	#include "Dog.hpp"
-	#include "WrongAnimal.hpp"
-	#include "WrongCat.hpp"
+#include "Animal.hpp"
+#include "Brain.hpp"
+#include "Cat.hpp"
+#include "Dog.hpp"
 
+int main(void) {
+	std::cout << std::endl << "--- PDF: ---" << std::endl
+            << std::endl;
+  Dog *dog = new Dog();
+  Cat *cat = new Cat();
 
-int	main(void)
-{
-	const Animal *meta = new Animal();
-	const Animal *j = new Dog();
-	const Animal *i = new Cat();
-	
-	std::cout << j->getType() << " ";
-	j->makeSound();
-	std::cout << i->getType() << " ";
-	i->makeSound();
-	std::cout << meta->getType() << " ";
-	meta->makeSound();
+  delete dog;
+  delete cat;
 
-	delete(meta);
-	delete(j);
-	delete(i);
-	
-	std::cout << std::endl;
-	
-	const Animal *meta2 = new Animal("Smol animal");
-	const Dog *j2 = new Dog("Fido");
-	const Cat *i2 = new Cat("Chacha");
-	
-	std::cout << j2->getType() << " ";
-	j2->makeSound();
-	std::cout << i2->getType() << " ";
-	i2->makeSound();
-	std::cout << meta2->getType() << " ";
-	meta2->makeSound();
+  std::cout << std::endl
+            << "--- Array of animals ---" << std::endl
+            << std::endl;
 
-	delete(meta2);
-	delete(j2);
-	delete(i2);
+  Animal *array_animals[10];
+  for (int i = 0; i < 10; i++) {
+    if (i % 2)
+      array_animals[i] = new Dog();
+    else
+      array_animals[i] = new Cat();
+  }
+  std::cout << std::endl;
 
-	std::cout << std::endl;
+  for (int i = 0; i < 10; i++) array_animals[i]->makeSound();
 
-	const WrongAnimal *meta3 = new WrongAnimal();
-	const WrongCat *i3 = new WrongCat();
-	
-	std::cout << i3->getType() << " ";
-	i3->makeSound();
-	std::cout << meta3->getType() << " ";
-	meta3->makeSound();
+  std::cout << std::endl;
 
-	delete(meta3);
-	delete(i3);
+  for (int i = 0; i < 10; i++) delete array_animals[i];
 
-	std::cout << std::endl;
+  std::cout << std::endl
+            << "--- Test for deep copy ---" << std::endl
+            << std::endl;
+  Cat *cat2 = new Cat();
+  cat2->setIdeas("Hmm... fish!");
+  cat2->setIdeas("I wanna play...");
+  cat2->getIdeas();
 
-	const WrongAnimal *meta4 = new WrongAnimal("Wrong Smol animal");
-	const WrongAnimal *i4 = new WrongCat("Wrong Chacha");
-	
-	std::cout << i4->getType() << " ";
-	i4->makeSound();
-	std::cout << meta4->getType() << " ";
-	meta4->makeSound();
+  std::cout << std::endl
+            << "--- Making a deep copy ---" << std::endl
+            << std::endl;
 
-	delete(meta4);
-	delete(i4);
-	
-	return 0;
+  Cat *cat3 = new Cat(*cat2);
+  cat2->setIdeas("Gotta sleep now...");
+  std::cout << std::endl;
+  cat2->getIdeas();
+  std::cout << std::endl;
+  cat3->getIdeas();
+  std::cout << std::endl;
+
+  std::cout << std::endl
+            << "--- Copy assignment operator ---" << std::endl
+            << std::endl;
+
+	std::cout << "New Cat" << std::endl << std::endl;
+  Cat *cat4 = new Cat();
+	std::cout << std::endl <<"Assigning cat 3 to cat 4" << std::endl << std::endl;
+  *cat4 = *cat3;
+	std::cout << std::endl ;
+  cat4->getIdeas();
+  std::cout << std::endl;
+  cat3->setIdeas("No sleeping now!!!");
+  cat3->getIdeas();
+  std::cout << std::endl;
+  cat4->getIdeas();
+  std::cout << std::endl;
+
+	std::cout << std::endl
+            << "--- Destruction ---" << std::endl
+            << std::endl;
+
+  delete cat2;
+  delete cat3;
+  delete cat4;
+  return 0;
 }

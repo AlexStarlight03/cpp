@@ -6,7 +6,7 @@
 /*   By: adube <adube@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 10:38:40 by adube             #+#    #+#             */
-/*   Updated: 2024/08/21 10:57:54 by adube            ###   ########.fr       */
+/*   Updated: 2024/08/23 13:11:48 by adube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class Brain
 {
-private:
+protected:
 	std::string _ideas[100];
 	
 public:
@@ -26,6 +26,7 @@ public:
 	Brain &operator=(const Brain &rhs);
 	~Brain();
 
-	void setIdeas(std::string const &ideas, int const index);
-	std::string &getIdeas(int const index) const;
+	void setIdeas(std::string ideas, unsigned int index);
+	std::string const &getIdeas(unsigned int index) const;
+	Brain* copyBrain( void );
 };
